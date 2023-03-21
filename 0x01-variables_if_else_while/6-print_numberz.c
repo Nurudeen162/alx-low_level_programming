@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - entry point
- * a program that prints all single digit of base10
- * return: 0 (Success)
+ * Description - 'A program that prints all single digit of base10'
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
