@@ -1,27 +1,25 @@
 #include "main.h"
-#include <stdio.h>
 #include <ctype.h>
 /**
  * *leet - Encode a string
- * @str: check the length of the string
- * Return: Always 0
+ * @n: input value
+ * Return: n value
  */
-char *leet(char *str)
+char *leet(char *n)
 {
-	char *result = str;
-	const char *letters = "aeotl";
-	const char *replacements = "43071";
+	char s1[] = "aeotl";
+	char s2[] = "43071";
 	int i, j;
 
-	for (i = 0; i < 5; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (j = 0; str[j] != '\0'; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (str[j] == letters[i] || str[j] == toupper(letters[i]))
+			if (n[i] == s1[j])
 			{
-				result[j] = replacements[j];
+				n[i] = s2[j];
 			}
 		}
 	}
-	return (result);
+	return (n);
 }
