@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 /**
  * *leet - Encode a string
  * @n: input value
