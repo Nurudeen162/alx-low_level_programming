@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 /**
  * *leet - Encode a string
@@ -9,44 +9,20 @@
  */
 char *leet(char *str)
 {
-	char *result = malloc(strlen(str) + 1);
-	char *p = str;
-	char *q = result;
+	char *result = str;
+	const char *letters = "aeotl";
+	const char *replacements = "43071";
+	int i, j;
 
-	if (result == NULL)
+	for (i = 0; i < 5; i++)
 	{
-		return (NULL);
+		for (j = 0; str[j] != '\0'; j++)
+		{
+			if (str[j] == letters[i] || str[j] == toupper(letters[i]))
+			{
+				result[j] = replacements[j];
+			}
+		}
 	}
-
-	while (*p)
-	{
-		if (*p == 'a' || *p == 'A')
-		{
-			*q = '4';
-		}
-		else if (*p == 'e' || *p == 'E')
-		{
-			*q = '3';
-		}
-		else if (*p == 'o' || *p == 'O')
-		{
-			*q = '0';
-		}
-		else if (*p == 't' || *p == 'T')
-		{
-			*q = '7';
-		}
-		else if (*p == 'l' || *p == 'L')
-		{
-			*q = '1';
-		}
-		else
-		{
-			*q = *p;
-		}
-		p++;
-		q++;
-	}
-	*q = '\0';
 	return (result);
 }
