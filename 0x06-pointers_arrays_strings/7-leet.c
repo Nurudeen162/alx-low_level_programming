@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 /**
  * *leet - Encode a string
  * @str: check the length of the string
