@@ -1,13 +1,11 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 /**
  * *infinite_add - Function that add two numbers
- * @n1: An integer param
- * @n2: an integer param
- * @r: the outcome to be considered
- * @size_r: - the size of the outcome
- * Return: Always 0
+ * @n1: text representation of first number to add
+ * @n2: text representation of second number to add
+ * @r: pointer to buffer
+ * @size_r: - buffer size
+ * Return: pointer to calling function
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -50,6 +48,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[k - i - 1] = tmp;
 	}
 	r[k] = '\0';
+
 	if (k >= size_r)
 		return (0);
 	else
