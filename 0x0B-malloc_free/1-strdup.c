@@ -8,18 +8,23 @@
  */
 char *_strdup(char *str)
 {
-	size_t len = strlen(str);
-	char *dup = (char *)malloc(len + 1);
+	int q = 0, i = 1;
+	char *s;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-
-	if (dup == NULL)
+	while (str[i])
 	{
-		return (NULL);
+		i++;
 	}
-	strcpy(dup, str);
-	return (dup);
+	s = malloc((sizeof(char) * i) + 1);
+	if (s == NULL)
+		return (NULL);
+	while (q < i)
+	{
+		s[q] = str[q];
+		q++;
+	}
+	s[q] = '\0';
+	return (s);
 }
