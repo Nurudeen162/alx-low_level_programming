@@ -3,15 +3,15 @@
 
 /**
  * struct list_s - singly linked list
- * @len: length of the string
+ * @n: integer
  * @next: points to the next node
  *
  * Description: singly linked list node structure
  */
-typedef struct list_s
+typedef struct listint_s
 {
-	unsigned int len;
-	struct list_s *next;
+	int n;
+	struct listint_s *next;
 }listint_t;
 
 int _putchar(char c);
